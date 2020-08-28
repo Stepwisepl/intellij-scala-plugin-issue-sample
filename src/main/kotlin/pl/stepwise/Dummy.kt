@@ -12,10 +12,10 @@ fun main() {
             { t: Throwable ->
                 when (t) {
                     is ActorInitializationException -> {
-                        SupervisorStrategy.stop()   // WARNING HERE
+                        SupervisorStrategy.stop()   // WARNING HERE - "Requiring Directive got Any"
                     }
                     else -> {
-                        SupervisorStrategy.resume() // WARNING HERE
+                        SupervisorStrategy.resume() // WARNING HERE - "Requiring Directive got Any"
                     }
                 }
             },
